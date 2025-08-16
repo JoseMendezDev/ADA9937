@@ -23,10 +23,19 @@ public class ADASEMANA01 {
     }
 
     public static void main(String[] args) {
+        Scanner dato = new Scanner(System.in);
         int[] arreglo = {10, 25, 50, 75, 100};
-        int elemento = 50;
+
+        System.out.println("Ingresa el numero a buscar:");
+        int elemento = dato.nextInt();
         boolean encontrado = buscarElemento(arreglo, elemento);
         System.out.println(Arrays.toString(arreglo));
         System.out.println("¿Se encuentra el numero " + elemento + " en el arreglo? " + encontrado);
+        if (encontrado) {
+            System.out.println("Si se encuentra");
+        } else {
+            System.out.println("No se encuentra");
+        }
     }
 }
+

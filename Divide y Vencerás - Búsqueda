@@ -1,0 +1,8 @@
+El paradigma Divide y Vencerás (DyV) es una de las técnicas de diseño de algoritmos más importantes en ciencias de la computación. Consiste en abordar un problema complejo descomponiéndolo en partes más sencillas. El proceso consta de tres pasos principales, a menudo implementados de forma recursiva:
+​Dividir: Descomponer el problema original en dos o más subproblemas del mismo tipo (o similar), pero de menor tamaño.
+​Vencer (o Conquistar): Resolver recursivamente los subproblemas. Si el subproblema es lo suficientemente pequeño (caso base), se resuelve directamente de forma trivial.
+​Combinar: Juntar las soluciones de los subproblemas para construir la solución del problema original.
+​Ejemplos Comunes de DyV:
+​Búsqueda Binaria
+​Quicksort (algoritmo de ordenamiento)
+​Mergesort (algoritmo de ordenamiento)

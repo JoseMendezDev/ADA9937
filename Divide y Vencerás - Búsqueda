@@ -6,3 +6,24 @@ El paradigma Divide y Vencerás (DyV) es una de las técnicas de diseño de algo
 ​Búsqueda Binaria
 ​Quicksort (algoritmo de ordenamiento)
 ​Mergesort (algoritmo de ordenamiento)
+BUSQUEDA LINEAL Y BINARIA
+La búsqueda lineal es el algoritmo de búsqueda más básico y simple.
+​Definición y Funcionamiento
+​Concepto: Consiste en revisar, de forma secuencial (uno por uno), cada elemento del conjunto de datos hasta que se encuentra el valor deseado o se llega al final de la lista.
+​Proceso: El algoritmo comienza en el primer elemento (índice 0) y lo compara con el valor objetivo. Si no son iguales, pasa al siguiente elemento (índice 1), y así sucesivamente.
+Complejidad
+​Su complejidad temporal es O(n) (orden lineal). Esto significa que el tiempo de ejecución es directamente proporcional al número de elementos. Si la lista duplica su tamaño, el tiempo de búsqueda también se duplicará.
+La búsqueda binaria es un algoritmo mucho más eficiente, pero tiene una condición crucial.
+​Definición y Funcionamiento
+​Concepto: Es un algoritmo de Divide y Vencerás que se utiliza para encontrar la posición de un valor objetivo dentro de un conjunto de datos ordenado.
+​Requisito Vital: El arreglo, la lista o la estructura de datos DEBE estar ordenada para que funcione correctamente.
+​Proceso:
+​El algoritmo establece un rango de búsqueda (inicialmente, toda la lista).
+​Compara el valor objetivo con el elemento ubicado en la posición media del rango.
+​Hay tres posibilidades:
+​Si coinciden: El elemento es encontrado.
+​Si el objetivo es menor que el elemento medio: El algoritmo descarta la mitad superior de la lista y el nuevo rango de búsqueda se convierte en la mitad inferior.
+​Si el objetivo es mayor que el elemento medio: El algoritmo descarta la mitad inferior de la lista y el nuevo rango de búsqueda se convierte en la mitad superior.
+​El proceso se repite recursivamente (o iterativamente) hasta que el valor se encuentra o el rango de búsqueda queda vacío.
+Complejidad
+​Su complejidad temporal es O(\log n) (orden logarítmico). Esto implica que el tiempo de búsqueda aumenta muy lentamente a medida que crece el tamaño de la lista. Por ejemplo, en una lista de 1 millón de elementos, la búsqueda binaria solo necesitaría, en el peor caso, unas 20 comparaciones (porque 2^20 es aproximadamente 1 millón), mientras que la búsqueda lineal podría necesitar 1 millón de comparaciones.

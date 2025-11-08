@@ -1,0 +1,21 @@
+https://codigofacilito.com/articles/articulo_16_10_2019_16_22_35
+RECURSIVIDAD
+La recursividad ocurre cuando una función se define en términos de sí misma, lo que significa que se llama repetidamente a sí misma hasta que se cumple una condición de parada.
+Mecanismo: Utiliza la pila de llamadas de la computadora. Cada vez que la función se llama, se guarda el estado actual (el contexto) en la pila, lo que permite a la función volver al punto exacto de la llamada anterior cuando termina.
+Condición de Parada: Requiere un Caso Base o condición de salida que no implica una llamada recursiva. Es fundamental para evitar un desbordamiento de pila (Stack Overflow), que ocurre si la función se llama infinitamente.
+Ventajas: El código suele ser más elegante, conciso y natural para problemas que se definen inherentemente de forma auto-referencial (ejemplos clásicos incluyen el cálculo del factorial, la secuencia de Fibonacci y el recorrido de estructuras de datos como árboles).
+Desventajas: Generalmente es más lenta y consume más memoria que la iteración debido a la sobrecarga que implica crear y manejar múltiples contextos en la pila de llamadas.
+ITERACIÓN (Uso de bucles)
+La iteración se refiere al uso de estructuras de control de flujo explícitas, como los bucles (for, while, do-while), para repetir un bloque de código.
+Mecanismo: Utiliza una variable de control o contador que se actualiza en cada paso. El proceso se ejecuta en un único contexto de función.
+Condición de Parada: Se basa en una Condición de Terminación que se evalúa al inicio o al final de cada ciclo del bucle. Si esta condición no se alcanza, resulta en un bucle infinito.
+Ventajas: Es más eficiente en términos de uso de memoria y generalmente más rápida que la recursividad, ya que evita la sobrecarga de múltiples llamadas a funciones. Es más directa para tareas simples y repetitivas.
+Desventajas: Puede resultar en código menos intuitivo o más complejo de escribir para problemas que tienen una definición recursiva natural, ya que requiere que el programador gestione explícitamente el estado del ciclo.
+
+Tanto la recursión como la iteración se usan para ejecutar algunas instrucciones repetidamente hasta que alguna condición sea verdadera. Pero existe una diferencia importante entre ambas, primero conoceremos el concepto de recursividad.
+Recursividad se refiere a una situación en la que una función se llama a sí misma una y otra vez.
+Iteración permite repetir una sentencia o conjunto de ellas.
+La recursividad se usa para realizar algoritmos cortos y elegantes con menos código, mientras que la iteración presenta la habitual forma de uno o varios bucles. 
+Además, la recursividad usa la pila, por lo tanto, facilita las llamadas recursivas. Esto significa que una función es libre de llamarse de nuevo, porque se creará un nuevo stack frame para todas sus variables locales. 
+Entonces al ejecutarse por primera vez la función se guardarán las variables, si la función se llama a sí misma guardará las variables nuevamente en la pila, junto a las variables anteriores. 
+Si nosotros hacemos que la función se llame miles de veces, las variables ocupan demasiada memoria, si queremos ejecutar varias instrucciones repetitivamente, debemos usar una iteración ya que no usa la pila. 

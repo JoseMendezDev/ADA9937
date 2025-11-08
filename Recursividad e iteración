@@ -12,7 +12,7 @@ Condición de Parada: Se basa en una Condición de Terminación que se evalúa a
 Ventajas: Es más eficiente en términos de uso de memoria y generalmente más rápida que la recursividad, ya que evita la sobrecarga de múltiples llamadas a funciones. Es más directa para tareas simples y repetitivas.
 Desventajas: Puede resultar en código menos intuitivo o más complejo de escribir para problemas que tienen una definición recursiva natural, ya que requiere que el programador gestione explícitamente el estado del ciclo.
 
-Tanto la recursión como la iteración se usan para ejecutar algunas instrucciones repetidamente hasta que alguna condición sea verdadera. Pero existe una diferencia importante entre ambas, primero conoceremos el concepto de recursividad.
+Tanto la recursión como la iteración se usan para ejecutar algunas instrucciones repetidamente hasta que alguna condición sea verdadera. Pero existe una diferencia importante entre ambas.
 Recursividad se refiere a una situación en la que una función se llama a sí misma una y otra vez.
 Iteración permite repetir una sentencia o conjunto de ellas.
 La recursividad se usa para realizar algoritmos cortos y elegantes con menos código, mientras que la iteración presenta la habitual forma de uno o varios bucles. 

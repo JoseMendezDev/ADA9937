@@ -5,6 +5,7 @@ Mecanismo: Utiliza la pila de llamadas de la computadora. Cada vez que la funci�
 Condición de Parada: Requiere un Caso Base o condición de salida que no implica una llamada recursiva. Es fundamental para evitar un desbordamiento de pila (Stack Overflow), que ocurre si la función se llama infinitamente.
 Ventajas: El código suele ser más elegante, conciso y natural para problemas que se definen inherentemente de forma auto-referencial (ejemplos clásicos incluyen el cálculo del factorial, la secuencia de Fibonacci y el recorrido de estructuras de datos como árboles).
 Desventajas: Generalmente es más lenta y consume más memoria que la iteración debido a la sobrecarga que implica crear y manejar múltiples contextos en la pila de llamadas.
+
 ITERACIÓN (Uso de bucles)
 La iteración se refiere al uso de estructuras de control de flujo explícitas, como los bucles (for, while, do-while), para repetir un bloque de código.
 Mecanismo: Utiliza una variable de control o contador que se actualiza en cada paso. El proceso se ejecuta en un único contexto de función.
@@ -14,8 +15,17 @@ Desventajas: Puede resultar en código menos intuitivo o más complejo de escrib
 
 Tanto la recursión como la iteración se usan para ejecutar algunas instrucciones repetidamente hasta que alguna condición sea verdadera. Pero existe una diferencia importante entre ambas.
 Recursividad se refiere a una situación en la que una función se llama a sí misma una y otra vez.
-Iteración permite repetir una sentencia o conjunto de ellas.
+La iteración permite repetir una sentencia o conjunto de ellas.
 La recursividad se usa para realizar algoritmos cortos y elegantes con menos código, mientras que la iteración presenta la habitual forma de uno o varios bucles. 
 Además, la recursividad usa la pila, por lo tanto, facilita las llamadas recursivas. Esto significa que una función es libre de llamarse de nuevo, porque se creará un nuevo stack frame para todas sus variables locales. 
-Entonces al ejecutarse por primera vez la función se guardarán las variables, si la función se llama a sí misma guardará las variables nuevamente en la pila, junto a las variables anteriores. 
-Si nosotros hacemos que la función se llame miles de veces, las variables ocupan demasiada memoria, si queremos ejecutar varias instrucciones repetitivamente, debemos usar una iteración ya que no usa la pila. 
+Entonces al ejecutarse por primera vez la función se guardarán las variables, si la función se llama a sí misma, guardará las variables nuevamente en la pila, junto a las variables anteriores. 
+Si nosotros hacemos que la función se llame miles de veces, las variables ocupan demasiada memoria; si queremos ejecutar varias instrucciones repetitivamente, debemos usar una iteración ya que no usa la pila. 
+
+BACKTRACKING
+El backtracking es una técnica de resolución de problemas basada en recursión con retroceso. Su idea principal es explorar todas las posibles soluciones de manera sistemática, tomando decisiones paso a paso y retrocediendo cuando una elección no conduce a una solución válida.
+En esencia, el algoritmo construye una solución parcial, la evalúa y, si no cumple las condiciones del problema, revierte los cambios para intentar otra alternativa. Este proceso continúa hasta encontrar una o todas las soluciones posibles. 
+Por eso, el backtracking combina recursión con control explícito del estado, asegurando que cada llamada deje las cosas tal como estaban antes de ejecutarse.
+El retroceso es necesario cuando las llamadas recursivas comparten estructuras de datos mutables, como listas o arreglos. En cada nivel se modifica el estado —por ejemplo, se agrega un elemento—, se llama recursivamente, 
+y al volver se deshace la modificación (por ejemplo, eliminando el último elemento) para restaurar el estado anterior y poder explorar una nueva opción. Este patrón se conoce como añadir → explorar → eliminar.
+Una ventaja del backtracking es que permite recorrer el espacio de soluciones de forma ordenada y eficiente, descartando rutas imposibles tan pronto como se detecta que no pueden conducir a una solución válida (poda). 
+Sin embargo, su complejidad puede crecer exponencialmente, por lo que optimizaciones como la poda o el uso de heurísticas son esenciales en problemas grandes.

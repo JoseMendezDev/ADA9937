@@ -19,7 +19,7 @@ La iteración permite repetir una sentencia o conjunto de ellas.
 La recursividad se usa para realizar algoritmos cortos y elegantes con menos código, mientras que la iteración presenta la habitual forma de uno o varios bucles. 
 Además, la recursividad usa la pila, por lo tanto, facilita las llamadas recursivas. Esto significa que una función es libre de llamarse de nuevo, porque se creará un nuevo stack frame para todas sus variables locales. 
 Entonces al ejecutarse por primera vez la función se guardarán las variables, si la función se llama a sí misma, guardará las variables nuevamente en la pila, junto a las variables anteriores. 
-Si nosotros hacemos que la función se llame miles de veces, las variables ocupan demasiada memoria; si queremos ejecutar varias instrucciones repetitivamente, debemos usar una iteración ya que no usa la pila. 
+Si nosotros hacemos que la función se llame miles de veces, las variables ocupan demasiada memoria; si queremos ejecutar varias instrucciones repetitivamente, debemos usar una iteración, ya que no usa la pila. 
 
 BACKTRACKING
 El backtracking es una técnica de resolución de problemas basada en recursión con retroceso. Su idea principal es explorar todas las posibles soluciones de manera sistemática, tomando decisiones paso a paso y retrocediendo cuando una elección no conduce a una solución válida.
@@ -29,3 +29,11 @@ El retroceso es necesario cuando las llamadas recursivas comparten estructuras d
 y al volver se deshace la modificación (por ejemplo, eliminando el último elemento) para restaurar el estado anterior y poder explorar una nueva opción. Este patrón se conoce como añadir → explorar → eliminar.
 Una ventaja del backtracking es que permite recorrer el espacio de soluciones de forma ordenada y eficiente, descartando rutas imposibles tan pronto como se detecta que no pueden conducir a una solución válida (poda). 
 Sin embargo, su complejidad puede crecer exponencialmente, por lo que optimizaciones como la poda o el uso de heurísticas son esenciales en problemas grandes.
+Cómo funciona:
+1. Se elige una solución inicial.
+2. Se exploran todas las extensiones posibles.
+3. Si una extensión lleva a una solución válida, se acepta.
+4. Si no, se retrocede al punto anterior y se prueba otra opción.
+5. Este proceso continúa hasta encontrar una solución o agotar las posibilidades.
+Ejemplo: En un laberinto, el algoritmo prueba moverse en distintas direcciones.Si encuentra un muro o un camino sin salida, vuelve atrás y prueba otra ruta hasta llegar a la salida, a eso se le llama backtracking.
+Es útil cuando hay múltiples soluciones posibles y el problema puede dividirse en subproblemas independientes.

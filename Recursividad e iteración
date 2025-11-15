@@ -37,3 +37,11 @@ Cómo funciona:
 5. Este proceso continúa hasta encontrar una solución o agotar las posibilidades.
 Ejemplo: En un laberinto, el algoritmo prueba moverse en distintas direcciones.Si encuentra un muro o un camino sin salida, vuelve atrás y prueba otra ruta hasta llegar a la salida, a eso se le llama backtracking.
 Es útil cuando hay múltiples soluciones posibles y el problema puede dividirse en subproblemas independientes.
+
+KNAPSACK (PROBLEMA DE LA MOCHILA)
+​El problema de la mochila busca encontrar la mejor combinación de elementos para incluir en un contenedor (la mochila) con una capacidad limitada (ej. peso o volumen), de manera que se maximice el valor total de los elementos empacados.
+
+Objetivo: Maximizar el valor total de los items seleccionados.
+Restricción: El peso total de la suma de los items mo debe superar la calidad de la mochila o contenedor.
+Items: Cada item tiene un valor y un peso.
+
